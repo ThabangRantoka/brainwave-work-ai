@@ -17,7 +17,7 @@ export function ToolPage({
 }) {
   return (
     <AppShell>
-      <div className="mx-auto w-full max-w-4xl space-y-8">
+      <div className="page-enter mx-auto w-full max-w-4xl space-y-8">
         <header className="animate-rise flex items-start gap-4">
           <span className="gradient-primary flex size-12 shrink-0 items-center justify-center rounded-2xl shadow-glow">
             <Icon className="size-6 text-primary-foreground" />
@@ -28,7 +28,7 @@ export function ToolPage({
           </div>
         </header>
 
-        <Card className="animate-rise gap-0 rounded-2xl border-border bg-card p-6 shadow-soft">
+        <Card className="animate-rise glass-card gap-0 rounded-2xl p-6">
           <div className="flex items-center gap-3 text-sm font-medium text-muted-foreground">
             <Loader2 className="size-4 animate-spin text-primary" />
             Preparing your AI workspace…
@@ -44,7 +44,7 @@ export function ToolPage({
           {hints.map((hint, i) => (
             <Card
               key={hint}
-              className="card-interactive animate-rise gap-0 rounded-2xl border-border bg-card p-5 text-sm text-muted-foreground shadow-soft"
+              className="card-interactive animate-rise glass-card gap-0 rounded-2xl p-5 text-sm text-muted-foreground"
               style={{ animationDelay: `${100 + i * 70}ms` }}
             >
               {hint}
