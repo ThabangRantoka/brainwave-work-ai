@@ -158,6 +158,27 @@
   background-image: var(--gradient-primary);
 }
 
+@utility gradient-hero {
+  background-image: linear-gradient(
+    135deg,
+    oklch(0.5 0.2 268),
+    oklch(0.55 0.19 260) 45%,
+    oklch(0.66 0.16 232)
+  );
+}
+
+@utility glass-card {
+  border: 1px solid color-mix(in oklab, var(--border) 85%, transparent);
+  background: color-mix(in oklab, var(--card) 72%, transparent);
+  backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: var(--shadow-soft);
+}
+
+@utility page-enter {
+  animation: rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+
 @utility gradient-surface {
   background-image: var(--gradient-surface);
 }
