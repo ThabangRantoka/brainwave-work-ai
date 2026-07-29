@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TaskPlannerRouteImport } from './routes/task-planner'
+import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as ResearchAssistantRouteImport } from './routes/research-assistant'
 import { Route as MeetingNotesRouteImport } from './routes/meeting-notes'
 import { Route as EmailGeneratorRouteImport } from './routes/email-generator'
@@ -19,6 +20,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const TaskPlannerRoute = TaskPlannerRouteImport.update({
   id: '/task-planner',
   path: '/task-planner',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ResearchAssistantRoute = ResearchAssistantRouteImport.update({
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/email-generator': typeof EmailGeneratorRoute
   '/meeting-notes': typeof MeetingNotesRoute
   '/research-assistant': typeof ResearchAssistantRoute
+  '/settings': typeof SettingsRoute
   '/task-planner': typeof TaskPlannerRoute
 }
 export interface FileRoutesByTo {
@@ -61,6 +68,7 @@ export interface FileRoutesByTo {
   '/email-generator': typeof EmailGeneratorRoute
   '/meeting-notes': typeof MeetingNotesRoute
   '/research-assistant': typeof ResearchAssistantRoute
+  '/settings': typeof SettingsRoute
   '/task-planner': typeof TaskPlannerRoute
 }
 export interface FileRoutesById {
@@ -70,6 +78,7 @@ export interface FileRoutesById {
   '/email-generator': typeof EmailGeneratorRoute
   '/meeting-notes': typeof MeetingNotesRoute
   '/research-assistant': typeof ResearchAssistantRoute
+  '/settings': typeof SettingsRoute
   '/task-planner': typeof TaskPlannerRoute
 }
 export interface FileRouteTypes {
@@ -80,6 +89,7 @@ export interface FileRouteTypes {
     | '/email-generator'
     | '/meeting-notes'
     | '/research-assistant'
+    | '/settings'
     | '/task-planner'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -88,6 +98,7 @@ export interface FileRouteTypes {
     | '/email-generator'
     | '/meeting-notes'
     | '/research-assistant'
+    | '/settings'
     | '/task-planner'
   id:
     | '__root__'
@@ -96,6 +107,7 @@ export interface FileRouteTypes {
     | '/email-generator'
     | '/meeting-notes'
     | '/research-assistant'
+    | '/settings'
     | '/task-planner'
   fileRoutesById: FileRoutesById
 }
@@ -105,6 +117,7 @@ export interface RootRouteChildren {
   EmailGeneratorRoute: typeof EmailGeneratorRoute
   MeetingNotesRoute: typeof MeetingNotesRoute
   ResearchAssistantRoute: typeof ResearchAssistantRoute
+  SettingsRoute: typeof SettingsRoute
   TaskPlannerRoute: typeof TaskPlannerRoute
 }
 
@@ -115,6 +128,13 @@ declare module '@tanstack/react-router' {
       path: '/task-planner'
       fullPath: '/task-planner'
       preLoaderRoute: typeof TaskPlannerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/research-assistant': {
@@ -161,6 +181,7 @@ const rootRouteChildren: RootRouteChildren = {
   EmailGeneratorRoute: EmailGeneratorRoute,
   MeetingNotesRoute: MeetingNotesRoute,
   ResearchAssistantRoute: ResearchAssistantRoute,
+  SettingsRoute: SettingsRoute,
   TaskPlannerRoute: TaskPlannerRoute,
 }
 export const routeTree = rootRouteImport
