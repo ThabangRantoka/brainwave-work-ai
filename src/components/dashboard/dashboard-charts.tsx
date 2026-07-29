@@ -59,10 +59,6 @@ function ChartShell({
   );
 }
 
-function TooltipStyle() {
-  return null;
-}
-
 const tooltipStyle = {
   contentStyle: {
     background: "var(--popover)",
