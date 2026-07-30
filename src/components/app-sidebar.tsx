@@ -7,6 +7,8 @@ import {
   Telescope,
   MessagesSquare,
   Settings,
+  LifeBuoy,
+
   Sparkles,
 } from "lucide-react";
 
