@@ -13,6 +13,7 @@ import { Route as TaskPlannerRouteImport } from './routes/task-planner'
 import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as ResearchAssistantRouteImport } from './routes/research-assistant'
 import { Route as MeetingNotesRouteImport } from './routes/meeting-notes'
+import { Route as HelpRouteImport } from './routes/help'
 import { Route as EmailGeneratorRouteImport } from './routes/email-generator'
 import { Route as AiChatRouteImport } from './routes/ai-chat'
 import { Route as IndexRouteImport } from './routes/index'
@@ -37,6 +38,11 @@ const MeetingNotesRoute = MeetingNotesRouteImport.update({
   path: '/meeting-notes',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HelpRoute = HelpRouteImport.update({
+  id: '/help',
+  path: '/help',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EmailGeneratorRoute = EmailGeneratorRouteImport.update({
   id: '/email-generator',
   path: '/email-generator',
@@ -57,6 +63,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/ai-chat': typeof AiChatRoute
   '/email-generator': typeof EmailGeneratorRoute
+  '/help': typeof HelpRoute
   '/meeting-notes': typeof MeetingNotesRoute
   '/research-assistant': typeof ResearchAssistantRoute
   '/settings': typeof SettingsRoute
@@ -66,6 +73,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/ai-chat': typeof AiChatRoute
   '/email-generator': typeof EmailGeneratorRoute
+  '/help': typeof HelpRoute
   '/meeting-notes': typeof MeetingNotesRoute
   '/research-assistant': typeof ResearchAssistantRoute
   '/settings': typeof SettingsRoute
@@ -76,6 +84,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/ai-chat': typeof AiChatRoute
   '/email-generator': typeof EmailGeneratorRoute
+  '/help': typeof HelpRoute
   '/meeting-notes': typeof MeetingNotesRoute
   '/research-assistant': typeof ResearchAssistantRoute
   '/settings': typeof SettingsRoute
@@ -87,6 +96,7 @@ export interface FileRouteTypes {
     | '/'
     | '/ai-chat'
     | '/email-generator'
+    | '/help'
     | '/meeting-notes'
     | '/research-assistant'
     | '/settings'
@@ -96,6 +106,7 @@ export interface FileRouteTypes {
     | '/'
     | '/ai-chat'
     | '/email-generator'
+    | '/help'
     | '/meeting-notes'
     | '/research-assistant'
     | '/settings'
@@ -105,6 +116,7 @@ export interface FileRouteTypes {
     | '/'
     | '/ai-chat'
     | '/email-generator'
+    | '/help'
     | '/meeting-notes'
     | '/research-assistant'
     | '/settings'
@@ -115,6 +127,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AiChatRoute: typeof AiChatRoute
   EmailGeneratorRoute: typeof EmailGeneratorRoute
+  HelpRoute: typeof HelpRoute
   MeetingNotesRoute: typeof MeetingNotesRoute
   ResearchAssistantRoute: typeof ResearchAssistantRoute
   SettingsRoute: typeof SettingsRoute
@@ -151,6 +164,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MeetingNotesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/help': {
+      id: '/help'
+      path: '/help'
+      fullPath: '/help'
+      preLoaderRoute: typeof HelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/email-generator': {
       id: '/email-generator'
       path: '/email-generator'
@@ -179,6 +199,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AiChatRoute: AiChatRoute,
   EmailGeneratorRoute: EmailGeneratorRoute,
+  HelpRoute: HelpRoute,
   MeetingNotesRoute: MeetingNotesRoute,
   ResearchAssistantRoute: ResearchAssistantRoute,
   SettingsRoute: SettingsRoute,

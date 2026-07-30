@@ -8,7 +8,6 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
 
 type Notification = {
   id: string;
@@ -82,7 +81,7 @@ export function NotificationCenter() {
             Mark all read
           </Button>
         </div>
-        <ScrollArea className="max-h-80">
+        <div className="max-h-80 overflow-y-auto">
           <ul className="divide-y divide-border">
             {items.map((n) => (
               <li key={n.id}>
@@ -107,7 +106,7 @@ export function NotificationCenter() {
               </li>
             )}
           </ul>
-        </ScrollArea>
+        </div>
       </PopoverContent>
     </Popover>
   );
