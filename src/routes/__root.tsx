@@ -77,18 +77,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "ProductivityOS AI" },
+      { title: "Dashboard | ProductivityOS AI" },
       {
         name: "description",
-        content: "AI-powered workplace assistant for emails, meetings, tasks and research.",
+        content: "ProductivityOS AI is your intelligent workplace assistant for emails, meeting notes, task planning and research.",
       },
-      { property: "og:title", content: "ProductivityOS AI" },
+      { property: "og:title", content: "Dashboard | ProductivityOS AI" },
       {
         property: "og:description",
-        content: "AI-powered workplace assistant for emails, meetings, tasks and research.",
+        content: "ProductivityOS AI is your intelligent workplace assistant for emails, meeting notes, task planning and research.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Dashboard | ProductivityOS AI" },
+      { name: "twitter:description", content: "ProductivityOS AI is your intelligent workplace assistant for emails, meeting notes, task planning and research." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/abca151e-9ed1-4388-9476-8aa5fc7bbc54/id-preview-3456f948--6a857389-b352-474f-b65e-d64d87d4b78f.lovable.app-1785388425792.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/abca151e-9ed1-4388-9476-8aa5fc7bbc54/id-preview-3456f948--6a857389-b352-474f-b65e-d64d87d4b78f.lovable.app-1785388425792.png" },
     ],
     links: [
       {

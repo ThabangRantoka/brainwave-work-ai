@@ -40,7 +40,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Automate daily work with an AI workplace assistant: emails, meeting summaries, task plans and research.",
+          "ProductivityOS AI is your intelligent workplace assistant for emails, meeting notes, task planning and research.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
