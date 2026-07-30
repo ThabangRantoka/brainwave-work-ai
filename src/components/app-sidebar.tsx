@@ -81,8 +81,25 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
 
-      <SidebarFooter className="pb-4">
+      <SidebarFooter className="gap-2 pb-4">
+        {!collapsed && (
+          <div className="glass-card mx-1 rounded-xl px-3 py-2.5">
+            <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+              Signed in as
+            </p>
+            <p className="truncate text-sm font-semibold">Alex Rivera</p>
+            <p className="truncate text-[11px] text-muted-foreground">Product Lead</p>
+          </div>
+        )}
         <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton asChild isActive={isActive("/help")} tooltip="Help & Documentation">
+              <Link to="/help" className="flex items-center gap-3">
+                <LifeBuoy className="size-4" />
+                <span>Help &amp; Docs</span>
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
           <SidebarMenuItem>
             <SidebarMenuButton asChild isActive={isActive("/settings")} tooltip="Settings">
               <Link to="/settings" className="flex items-center gap-3">
@@ -93,6 +110,7 @@ export function AppSidebar() {
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarFooter>
+
     </Sidebar>
   );
 }
