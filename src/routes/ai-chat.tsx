@@ -6,7 +6,6 @@ import { ToolLayout } from "@/components/tool-layout";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { ScrollArea } from "@/components/ui/scroll-area";
 
 export const Route = createFileRoute("/ai-chat")({
   head: () => ({
@@ -140,7 +139,7 @@ function AiChat() {
             </Button>
           </div>
 
-          <ScrollArea className="h-[26rem]" viewportRef={scrollRef}>
+          <div ref={scrollRef} className="h-[26rem] overflow-y-auto">
             <div className="space-y-4 p-4">
               {messages.map((m) => (
                 <div
@@ -186,7 +185,7 @@ function AiChat() {
                 </div>
               )}
             </div>
-          </ScrollArea>
+          </div>
 
           <div className="border-t border-border p-4">
             <div className="mb-3 flex flex-wrap gap-2">
