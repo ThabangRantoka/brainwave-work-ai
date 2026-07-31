@@ -18,12 +18,12 @@ export function UserMenu() {
         <button className="flex items-center gap-2 rounded-xl border border-border bg-card p-1.5 pr-2 shadow-soft transition-all hover:shadow-lift sm:pl-2">
           <Avatar className="size-8">
             <AvatarFallback className="gradient-primary text-xs font-semibold text-primary-foreground">
-              AR
+              TR
             </AvatarFallback>
           </Avatar>
           <span className="hidden text-left leading-tight md:block">
-            <span className="block text-sm font-semibold">Alex Rivera</span>
-            <span className="block text-[11px] text-muted-foreground">Product Lead</span>
+            <span className="block text-sm font-semibold">Thabang Rantoka</span>
+            <span className="block text-[11px] text-muted-foreground">AI Productivity Specialist</span>
           </span>
           <ChevronDown className="hidden size-4 text-muted-foreground md:block" />
         </button>
@@ -32,13 +32,13 @@ export function UserMenu() {
         <DropdownMenuLabel className="flex items-center gap-3 py-3">
           <Avatar className="size-9">
             <AvatarFallback className="gradient-primary text-xs font-semibold text-primary-foreground">
-              AR
+              TR
             </AvatarFallback>
           </Avatar>
           <span className="leading-tight">
-            <span className="block text-sm font-semibold">Alex Rivera</span>
+            <span className="block text-sm font-semibold">Thabang Rantoka</span>
             <span className="block text-xs font-normal text-muted-foreground">
-              alex@productivityos.ai
+              thabang@productivityos.ai
             </span>
           </span>
         </DropdownMenuLabel>

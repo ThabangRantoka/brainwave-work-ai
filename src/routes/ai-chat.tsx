@@ -40,7 +40,7 @@ const history = [
 const greeting: Message = {
   id: "intro",
   role: "assistant",
-  text: "Hi Alex — I'm your ProductivityOS assistant. I can summarise meetings, draft emails, reshuffle your schedule or pull together a quick briefing. What would you like to start with?",
+  text: "Hi Thabang — I'm your ProductivityOS assistant. I can summarise meetings, draft emails, reshuffle your schedule or pull together a quick briefing. What would you like to start with?",
 };
 
 function reply(prompt: string): string {

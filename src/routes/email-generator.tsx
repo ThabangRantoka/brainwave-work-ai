@@ -62,8 +62,8 @@ Given this is going to a ${audience.toLowerCase()}, I've kept the framing ${tone
 ${closings[variant % closings.length]}
 
 Best regards,
-Alex Rivera
-Product Lead, ProductivityOS AI`;
+Thabang Rantoka
+AI Productivity Specialist, ProductivityOS AI`;
 }
 
 function EmailGenerator() {
