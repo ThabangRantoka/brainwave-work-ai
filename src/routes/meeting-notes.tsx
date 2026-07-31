@@ -40,7 +40,7 @@ const mockSummary: Summary = {
     "Legal sign-off is required before any customer-facing AI copy goes live.",
   ],
   actions: [
-    { task: "Finalise the activation flow spec", owner: "Alex Rivera", due: "Fri, Aug 8" },
+    { task: "Finalise the activation flow spec", owner: "Thabang Rantoka", due: "Fri, Aug 8" },
     { task: "Prepare pilot expansion comms", owner: "Priya Nair", due: "Mon, Aug 11" },
     { task: "Run performance pass on the summariser", owner: "Daniel Cho", due: "Wed, Aug 13" },
     { task: "Collect legal review on AI disclaimers", owner: "Marta Silva", due: "Thu, Aug 14" },

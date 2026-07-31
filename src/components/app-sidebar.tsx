@@ -89,8 +89,8 @@ export function AppSidebar() {
             <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
               Signed in as
             </p>
-            <p className="truncate text-sm font-semibold">Alex Rivera</p>
-            <p className="truncate text-[11px] text-muted-foreground">Product Lead</p>
+            <p className="truncate text-sm font-semibold">Thabang Rantoka</p>
+            <p className="truncate text-[11px] text-muted-foreground">AI Productivity Specialist</p>
           </div>
         )}
         <SidebarMenu>

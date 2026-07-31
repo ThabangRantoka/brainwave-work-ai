@@ -127,7 +127,7 @@ function Dashboard() {
             <div className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/15 px-3 py-1.5 backdrop-blur-md">
               <GreetingIcon className="size-3.5 text-primary-foreground" />
               <span className="text-xs font-medium text-primary-foreground">
-                {greeting.text}, Alex
+                {greeting.text}, Thabang
               </span>
             </div>
 
